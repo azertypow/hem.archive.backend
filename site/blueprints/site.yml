@@ -16,29 +16,31 @@ columns:
         layout: cards
         size: medium
         text: " "
-    projects:
-      label: Projets de recherches
-      type: pages
-      status: listed
-      headline: Home
-      image:
-        query: page.children.first.cover.toFile
-        cover: true
-      templates: projects
-      layout: cards
-      size: medium
-      text: " "
   - width: 1/2
     sections:
       about:
         label: À Propos
         type: pages
-  #      status: listed
+        status: listed
         headline: Home
         image:
           query: page.children.first.cover.toFile
           cover: true
         templates: about
+        layout: cards
+        size: medium
+        text: " "
+  - width: 1/2
+    sections:
+      community:
+        label: Communauté
+        type: pages
+#        status: listed
+        headline: Home
+        image:
+          query: page.children.first.cover.toFile
+          cover: true
+        templates: community
         layout: cards
         size: medium
         text: " "

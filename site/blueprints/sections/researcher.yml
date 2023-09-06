@@ -1,8 +1,8 @@
 type: pages
-label: Projets
-parent: kirby.page("projects")
+label: Chercheur.euse
+parent: kirby.page("Communaute")
 info: "{{ page.published }}"
-template: project
+template: researcher
 empty: pas de projets en court ici…
 sortBy: date desc
 layout: cardlets
