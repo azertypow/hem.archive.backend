@@ -1,0 +1,6 @@
+type: files
+multiple: false
+query: page.images.template('image')
+label: Image de couverture
+uploads:
+  template: image

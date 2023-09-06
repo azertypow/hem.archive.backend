@@ -1,0 +1,13 @@
+type: pages
+label: Projets
+parent: kirby.page("projects")
+info: "{{ page.published }}"
+template: project
+empty: pas de en court projets pour ici…
+sortBy: date desc
+layout: cardlets
+image:
+  query: page.cover.toFile
+  cover: true
+  ratio: 3/1
+

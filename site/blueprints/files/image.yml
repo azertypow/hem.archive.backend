@@ -1,0 +1,27 @@
+title: Image
+
+accept:
+  type: image
+
+columns:
+  - width: 1/2
+    sections:
+      content:
+        type: fields
+        fields:
+          caption:
+            label: Légende
+            type: textarea
+            size: medium
+  - width: 1/2
+    sections:
+      meta:
+        type: fields
+        fields:
+          alt:
+            label: Texte Alternative
+            type: text
+          photoCredit:
+            label: Crédits
+            type: text
+            width: 2/3

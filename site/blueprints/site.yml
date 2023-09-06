@@ -1,0 +1,44 @@
+options:
+  changeTitle: true
+
+columns:
+  - width: 1/2
+    sections:
+      projects:
+        label: Projets de recherches
+        type: pages
+        status: listed
+        headline: Home
+        image:
+          query: page.children.first.cover.toFile
+          cover: true
+        templates: projects
+        layout: cards
+        size: medium
+        text: " "
+    projects:
+      label: Projets de recherches
+      type: pages
+      status: listed
+      headline: Home
+      image:
+        query: page.children.first.cover.toFile
+        cover: true
+      templates: projects
+      layout: cards
+      size: medium
+      text: " "
+  - width: 1/2
+    sections:
+      about:
+        label: À Propos
+        type: pages
+  #      status: listed
+        headline: Home
+        image:
+          query: page.children.first.cover.toFile
+          cover: true
+        templates: about
+        layout: cards
+        size: medium
+        text: " "
