@@ -1,12 +1,14 @@
 {
-  "name": "getkirby/starterkit",
-  "description": "Kirby Starterkit",
+  "name": "getkirby/plainkit",
+  "version": "2.0.0",
+  "description": "Kirby Plainkit",
   "type": "project",
   "keywords": [
     "kirby",
     "cms",
     "starterkit"
   ],
+  "homepage": "https://getkirby.com",
   "authors": [
     {
       "name": "Bastian Allgeier",
@@ -14,7 +16,6 @@
       "homepage": "https://getkirby.com"
     }
   ],
-  "homepage": "https://getkirby.com",
   "support": {
     "email": "support@getkirby.com",
     "issues": "https://github.com/getkirby/starterkit/issues",
@@ -22,20 +23,20 @@
     "source": "https://github.com/getkirby/starterkit"
   },
   "require": {
-    "php": ">=8.0.0 <8.3.0",
-    "getkirby/cms": "^3.8",
-    "ext-zip": "*"
-  },
-  "config": {
-    "allow-plugins": {
-      "getkirby/composer-installer": true
-    },
-    "optimize-autoloader": true
+    "php": ">=8.0.0 <= 8.2.6",
+    "getkirby/cms": "^3.6",
+    "ext-json": "*"
   },
   "scripts": {
     "start": [
       "Composer\\Config::disableProcessTimeout",
-      "@php -S localhost:8000 kirby/router.php"
+      "@php -c ./php.ini -S localhost:8000 kirby/router.php"
     ]
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "getkirby/composer-installer": true
+    }
   }
 }
