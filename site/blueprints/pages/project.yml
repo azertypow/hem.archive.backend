@@ -69,11 +69,29 @@ columns:
             type: multiselect
             min: 1
             options:
-              musicEtMouvement: Musique et mouvement
-              vents: Vents
-              recherchePedagogique: Recherche Pédagogique
+              Musique et mouvement
+              Percussion
+              Vents
+              Diminution et ornementation
+              Solmisation
+              Informatique musicale (cf. Luis Naon)
+              Pratique historiquement informée
+              Claviers
+              Chant
+              Interprétation et ornementation
+              Orchestre
+              Recherche pédagogique
+              Échanges culturels (cf. Xavier Bouvier)
+              Analyse et théorie de la musique
+              Geste et mouvement
+              Musiques d’aujourd’hui
+              Musique et arts performatifs
+              Musique à Genève et en Suisse
+              Métiers
+              Santé du musicien-ne
 
-  - width: 1/4
+
+- width: 1/4
     fields:
       imagesFiles:
         label: Archive d'images (.ZIP)
