@@ -1,8 +1,9 @@
 title: Archive
 
 accept:
-  mime: application/zip
   type: archive
+  extension: zip
+  mime: application/zip
 
 columns:
   - width: 1/2

@@ -1,9 +1,9 @@
-title: Image
+title: Vidéo
 
 accept:
-  type: image
-  extension: jpg, png
-  mime: image/jpeg, image/png
+  type: video
+  extension: mp4
+  mime: video/mp4
 
 columns:
   - width: 1/2

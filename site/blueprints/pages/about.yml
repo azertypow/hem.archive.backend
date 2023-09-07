@@ -21,10 +21,11 @@ tabs:
     fields:
       aboutText:
         type: blocks
-        label: Résumé du projet
+        label: Description pour la partie à propos
         fieldsets:
           - text
           - image
+          - heading
 
   contact:
     icon: map
@@ -32,7 +33,7 @@ tabs:
     fields:
       contactText:
         type: blocks
-        label: Résumé du projet
+        label: Description pour la partie contacte
         fieldsets:
           - text
           - image

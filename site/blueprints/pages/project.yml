@@ -27,7 +27,7 @@ columns:
           - text
           - image
           - gallery
-          - code
+          - video
 
   - width: 1/3
     sections:
@@ -86,16 +86,22 @@ columns:
       videoFiles:
         label: Fichiers video
         type: files
-        template: video
+        query: page.files.template('video')
+        uploads:
+          template: video
   - width: 1/4
     fields:
       autioFiles:
         label: Fichiers audio
         type: files
-        template: video
+        query: page.files.template('audio')
+        uploads:
+          template: audio
   - width: 1/4
     fields:
       pdfFiles:
         label: PDF
         type: files
-        template: video
+        query: page.files.template('pdf')
+        uploads:
+          template: pdf

@@ -1,9 +1,9 @@
-title: Image
+title: Pdf
 
 accept:
-  type: image
-  extension: jpg, png
-  mime: image/jpeg, image/png
+  type: document
+  extension: pdf
+  mime: application/pdf
 
 columns:
   - width: 1/2
