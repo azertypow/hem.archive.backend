@@ -2,7 +2,7 @@ options:
   changeTitle: true
 
 columns:
-  - width: 1/2
+  - width: 1/3
     sections:
       projects:
         label: Projets de recherches
@@ -16,7 +16,7 @@ columns:
         layout: cards
         size: medium
         text: " "
-  - width: 1/2
+  - width: 1/3
     sections:
       about:
         label: À Propos
@@ -30,7 +30,7 @@ columns:
         layout: cards
         size: medium
         text: " "
-  - width: 1/2
+  - width: 1/3
     sections:
       community:
         label: Communauté
