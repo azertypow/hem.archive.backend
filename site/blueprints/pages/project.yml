@@ -91,7 +91,7 @@ columns:
               Santé du musicien-ne
 
 
-- width: 1/4
+  - width: 1/4
     fields:
       imagesFiles:
         label: Archive d'images (.ZIP)
