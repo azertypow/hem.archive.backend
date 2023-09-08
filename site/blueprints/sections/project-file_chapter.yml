@@ -1,0 +1,12 @@
+type: pages
+label: Chapitre de fichier
+#parent: kirby.page("project")
+info: "{{ page.published }}"
+template: project-file_chapter
+empty: pas de projets en court ici…
+sortBy: date desc
+layout: cardlets
+image:
+  query: page.cover.toFile
+  cover: true
+  ratio: 3/1

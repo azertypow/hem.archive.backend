@@ -82,35 +82,7 @@ columns:
               type: query
               query: site.find('themes-et-axe-de-recherche').themes.toStructure
               text: "{{ item.value }}"
-  - width: 1/4
-    fields:
-      imagesFiles:
-        label: Archive d'images (.ZIP)
-        type: files
-        query: page.files.template('archive')
-        uploads:
-          template: archive
-  - width: 1/4
-    fields:
-      videoFiles:
-        label: Fichiers video
-        type: files
-        query: page.files.template('video')
-        uploads:
-          template: video
-  - width: 1/4
-    fields:
-      autioFiles:
-        label: Fichiers audio
-        type: files
-        query: page.files.template('audio')
-        uploads:
-          template: audio
-  - width: 1/4
-    fields:
-      pdfFiles:
-        label: PDF
-        type: files
-        query: page.files.template('pdf')
-        uploads:
-          template: pdf
+  - width: 2/3
+    sections:
+      all:
+        extends: sections/project-file_chapter

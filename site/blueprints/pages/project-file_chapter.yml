@@ -1,0 +1,40 @@
+title: Project
+
+icon: 📖
+
+columns:
+  - width: 2/3
+    fields:
+      textDescription:
+        type: writer
+
+  - width: 4/4
+    fields:
+      imagesFiles:
+        label: Archive d'images (.ZIP)
+        type: files
+        query: page.files.template('archive')
+        width: 1/4
+        uploads:
+          template: archive
+      videoFiles:
+        label: Fichiers video
+        type: files
+        query: page.files.template('video')
+        width: 1/4
+        uploads:
+          template: video
+      audioFiles:
+        label: Fichiers audio
+        type: files
+        query: page.files.template('audio')
+        width: 1/4
+        uploads:
+          template: audio
+      pdfFiles:
+        label: PDF
+        type: files
+        query: page.files.template('pdf')
+        width: 1/4
+        uploads:
+          template: pdf
