@@ -8,7 +8,6 @@ columns:
         label: Projets de recherches
         type: pages
         status: listed
-        headline: Home
         image:
           query: page.children.first.cover.toFile
           cover: true
@@ -22,7 +21,6 @@ columns:
         label: À Propos
         type: pages
         status: listed
-        headline: Home
         image:
           query: page.children.first.cover.toFile
           cover: true
@@ -35,8 +33,7 @@ columns:
       community:
         label: Communauté
         type: pages
-#        status: listed
-        headline: Home
+        status: listed
         image:
           query: page.children.first.cover.toFile
           cover: true
