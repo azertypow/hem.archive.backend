@@ -63,8 +63,12 @@ columns:
               query: site.children.template("community").children.template("researcher")
           financement:
             label: Financement
-            type:
-          axe:
+            type: writer
+            inline: true
+            marks:
+              - link
+              - italic
+          axes:
             label: Axe de recherche
             type: multiselect
             min: 1
