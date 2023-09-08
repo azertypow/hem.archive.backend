@@ -70,38 +70,17 @@ columns:
             min: 1
             max: 1
             options:
-              Métiers de la musique
-              Musique et technologie
-              Musique et société
-              Interprétation historique
-              Transmission
-              Musique du monde
-          theme:
+              type: query
+              query: site.find('themes-et-axe-de-recherche').axes.toStructure
+              text: "{{ item.value }}"
+          themes:
             label: Thèmes
             type: multiselect
             min: 1
             options:
-              Musique et mouvement
-              Percussion
-              Vents
-              Diminution et ornementation
-              Solmisation
-              Informatique musicale (cf. Luis Naon)
-              Pratique historiquement informée
-              Claviers
-              Chant
-              Interprétation et ornementation
-              Orchestre
-              Recherche pédagogique
-              Échanges culturels (cf. Xavier Bouvier)
-              Analyse et théorie de la musique
-              Geste et mouvement
-              Musiques d’aujourd’hui
-              Musique et arts performatifs
-              Musique à Genève et en Suisse
-              Métiers
-              Santé du musicien-ne
-
+              type: query
+              query: site.find('themes-et-axe-de-recherche').themes.toStructure
+              text: "{{ item.value }}"
   - width: 1/4
     fields:
       imagesFiles:

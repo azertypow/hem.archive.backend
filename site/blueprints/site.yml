@@ -44,3 +44,17 @@ columns:
         layout: cards
         size: medium
         text: " "
+
+  - width: 1/3
+    sections:
+      themeList:
+        label: Thèmes et Axe de recherche
+        type: pages
+        status: listed
+        image:
+          query: page.children.first.cover.toFile
+          cover: true
+        templates: themelist
+        layout: cards
+        size: medium
+        text: " "
