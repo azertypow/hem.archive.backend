@@ -6,33 +6,41 @@ columns:
   - width: 2/3
     fields:
       textDescription:
+        label: Texte de description
         type: writer
 
   - width: 4/4
     fields:
-      imagesFiles:
-        label: Archive d'images (.ZIP)
+      archiveFiles:
+        label: Dossiers (.ZIP)
         type: files
         query: page.files.template('archive')
         width: 1/4
         uploads:
           template: archive
+      imagesFiles:
+        label: Images
+        type: files
+        query: page.files.template('image')
+        width: 1/4
+        uploads:
+          template: archive
       videoFiles:
-        label: Fichiers video
+        label: Vidéos
         type: files
         query: page.files.template('video')
         width: 1/4
         uploads:
           template: video
       audioFiles:
-        label: Fichiers audio
+        label: Audios
         type: files
         query: page.files.template('audio')
         width: 1/4
         uploads:
           template: audio
       pdfFiles:
-        label: PDF
+        label: PDFs
         type: files
         query: page.files.template('pdf')
         width: 1/4

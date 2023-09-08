@@ -37,12 +37,12 @@ columns:
           cover: fields/cover
           dateStart:
             required: true
-            label: date de commencement
+            label: Date de commencement
             type: date
             default: now
             display: YYYY-MM
           dateEnd:
-            label: date de fin
+            label: Date de fin
             type: date
             default: now
             display: YYYY-MM

@@ -1,5 +1,5 @@
 type: pages
-label: Chapitre de fichier
+label: Chapitres de fichier
 #parent: kirby.page("project")
 info: "{{ page.published }}"
 template: project-file_chapter

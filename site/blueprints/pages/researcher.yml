@@ -56,7 +56,7 @@ columns:
         label: Détail de la fonction
       mail:
         type: email
-        label: mail
+        label: Email
 
   - width: 2/3
     fields:
@@ -65,8 +65,12 @@ columns:
         type: structure
         fields:
           publicationDescription:
-            label: Description
-            type: text
+            label: Référence
+            type: writer
+            inline: true
+            marks:
+              - italic
+              - link
           publicationLink:
             label: Lien externe
             type: url

@@ -33,7 +33,7 @@ tabs:
     fields:
       contactText:
         type: blocks
-        label: Description pour la partie contacte
+        label: Description pour la partie contact
         fieldsets:
           - text
           - image
