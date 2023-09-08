@@ -28,6 +28,11 @@ columns:
             label: Nom
             require: true
             type: text
+      info:
+        label: Attention
+        type: info
+        text: Veuillez privilégier la modification à la suppression de thème, merci.
+        theme: negative
       themes:
         label: Thèmes
         type: structure
