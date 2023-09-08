@@ -3,7 +3,7 @@ title: Axes et Thèmes de recherche
 options:
   changeSlug: false
   delete: false
-  changeTitle: true
+  changeTitle: false
   sort: false
   changeStatus: false
   duplicate: false
