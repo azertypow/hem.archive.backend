@@ -1,10 +1,12 @@
 title: Axes et Thèmes de recherche
 
-# Sorting number scheme that is applied when page status is changed to `listed`
-# More about page sorting: https://getkirby.com/docs/reference/panel/blueprints/page#sorting
-num: date
-
-icon: 📖
+options:
+  changeSlug: false
+  delete: false
+  changeTitle: true
+  sort: false
+  changeStatus: false
+  duplicate: false
 
 status:
   draft:
