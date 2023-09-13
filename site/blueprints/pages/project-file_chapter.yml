@@ -24,7 +24,7 @@ columns:
         query: page.files.template('image')
         width: 1/4
         uploads:
-          template: archive
+          template: image
       videoFiles:
         label: Vidéos
         type: files
