@@ -20,6 +20,10 @@ status:
 columns:
   - width: 2/3
     fields:
+      info:
+        label: Note pour l'italique dans le titre
+        type: info
+        text: Ajouter le caractère "_" autour d'un mot ou groupe de mot que vous souhaitez mettre en italic.
       text:
         type: blocks
         label: Résumé du projet
