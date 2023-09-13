@@ -46,6 +46,13 @@ columns:
             type: date
             default: now
             display: YYYY-MM
+          showMonth:
+            type: toggle
+            label: Afficher le mois
+            default: true
+            text:
+              - non
+              - oui
           author:
             label: Responsable
             type: multiselect
