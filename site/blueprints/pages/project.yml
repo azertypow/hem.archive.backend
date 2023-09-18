@@ -23,7 +23,7 @@ columns:
       info:
         label: Note pour l'italique dans le titre
         type: info
-        text: Ajouter le caractère "_" autour d'un mot ou groupe de mot que vous souhaitez mettre en italic.
+        text: Ajouter le caractère "*" autour d'un mot ou groupe de mots que vous souhaitez mettre en italique.
       text:
         type: blocks
         label: Résumé du projet
