@@ -9,4 +9,12 @@
  */
 return [
     'debug' => true,
+    'routes' => [
+        [
+            'pattern' => '/',
+            'action'  => function () {
+                go('/panel');
+            }
+        ],
+    ],
 ];
