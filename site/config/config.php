@@ -16,6 +16,12 @@ return [
                 go('/panel');
             }
         ],
+        [
+            'pattern' => '/api/v1/projects',
+            'action'  => function () {
+                return page('/api/v1/projects')->template('projects');
+            }
+        ],
     ],
     'panel' => [
         'css' => '_custom-panel/main.css',
