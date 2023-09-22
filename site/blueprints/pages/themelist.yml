@@ -21,15 +21,12 @@ status:
 
 columns:
   - width: 2/3
-    fields:
+    sections:
       axes:
         label: Axe de recherche
-        type: structure
-        fields:
-          value:
-            label: Nom
-            require: true
-            type: text
+        extends: sections/tags-list
+  - width: 2/3
+    fields:
       info:
         label: Attention
         type: info

@@ -83,8 +83,8 @@ columns:
             max: 1
             options:
               type: query
-              query: site.find('themes-et-axe-de-recherche').axes.toStructure
-              text: "{{ item.value }}"
+              query:  site.find('themes-et-axe-de-recherche').children.template('tags-list')
+              text: "{{ item.title }}"
           themes:
             label: Thèmes
             type: multiselect

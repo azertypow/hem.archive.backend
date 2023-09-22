@@ -17,4 +17,7 @@ return [
             }
         ],
     ],
+    'panel' => [
+        'css' => '_custom-panel/main.css',
+    ],
 ];

@@ -1,0 +1,19 @@
+title: Tags List
+
+icon: empty
+
+options:
+  delete: false
+  changeSlug: false
+
+columns:
+  - width: 2/3
+    fields:
+      info:
+        type: info
+        label: ''
+        text: Vous pouvez simplement modifier le nom de ce champs (titre ci-dessus). La référence de ce champs est {{page.uuid}}, et toutes les pages qui y sont liées garde la référence de celui-ci.
+
+#      tagValue:
+#        label: Valeur
+#        type: text

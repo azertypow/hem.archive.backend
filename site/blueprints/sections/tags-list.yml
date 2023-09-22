@@ -1,0 +1,8 @@
+type: pages
+label: Tags List
+#parent: kirby.page("Axes et thèmes de recherche")
+info: "{{ page.uuid }}"
+template: tags-list
+empty: la liste est vide pour l'instant…
+sortBy: title
+layout: list
