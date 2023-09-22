@@ -8,6 +8,7 @@ options:
   changeStatus: false
   duplicate: false
 
+
 status:
   draft:
     label: Draft
@@ -20,23 +21,30 @@ status:
     text: The note is online and listed in the blog
 
 columns:
-  - width: 2/3
+  - width: 1/1
     sections:
       axes:
         label: Axe de recherche
-        extends: sections/tags-list
-  - width: 2/3
-    fields:
-      info:
-        label: Attention
-        type: info
-        text: Veuillez privilégier la modification à la suppression de thème, merci.
-        theme: negative
+        type: pages
+        template: list-axes
+        empty: la liste est vide pour l'instant…
+        image: false
+        status: listed
+        layout: table
+        columns:
+          uuid:
+            label: identifiant
+
+  - width: 1/1
+    sections:
       themes:
+        search: true
         label: Thèmes
-        type: structure
-        fields:
-          value:
-            label: Nom
-            require: true
-            type: text
+        type: pages
+        template: list-theme
+        empty: la liste est vide pour l'instant…
+        image: false
+        layout: table
+        columns:
+          uuid:
+            label: identifiant

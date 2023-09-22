@@ -51,7 +51,7 @@ columns:
         image:
           query: page.children.first.cover.toFile
           cover: true
-        templates: themelist
+        templates: theme-and-axes-list
         layout: cards
         size: medium
         text: " "

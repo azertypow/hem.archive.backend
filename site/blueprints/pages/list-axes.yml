@@ -1,0 +1,25 @@
+title: Axes List
+
+icon: empty
+
+status:
+  draft: inactif
+  listed: actif
+  unlisted: false
+
+options:
+  delete: false
+  changeSlug: false
+  changeStatus: false
+  create: false
+
+columns:
+  - width: 2/3
+    fields:
+      info:
+        type: info
+        label: ''
+        text: |
+          ### Vous pouvez simplement modifier le titre de ce champs (titre ci-dessus).
+          La référence de ce champs est **{{page.uuid}}**, et toutes les pages qui y sont liées garde cette référence.
+
