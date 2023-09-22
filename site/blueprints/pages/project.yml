@@ -83,7 +83,7 @@ columns:
             max: 1
             options:
               type: query
-              query:  site.find('themes-et-axe-de-recherche').children.template('list-theme')
+              query:  site.find('themes-et-axe-de-recherche').children.template('list-axes')
               text: "{{ item.title }}"
           themes:
             label: Thèmes
@@ -91,7 +91,7 @@ columns:
             min: 1
             options:
               type: query
-              query: site.find('themes-et-axe-de-recherche').children.template('list-theme')
+              query: site.find('themes-et-axe-de-recherche').childrenAndDrafts.template('list-theme')
               text: "{{ item.title }}"
   - width: 2/3
     sections:
