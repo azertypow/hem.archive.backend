@@ -6,7 +6,7 @@
 include_once '_phpTools/jsonEncodeKirbyContent.php';
 
 echo json_encode([
-  'projects' => $site->find('projects')->children()->map(function (\Kirby\Cms\Page $project) use ($site) {
+  'projects' => $site->find('projects')->children()->map(function (\Kirby\Cms\Page $project) use ($kirby, $site) {
                     return [
                       'title' => $project->title()->value(),
 //                      todo: author to authors in blueprint
@@ -18,12 +18,18 @@ echo json_encode([
                                     ];
                               })->data()),
                       'cover' => getImageArrayDataInPage($project),
-                      'theme1' => $project->themes(),
-                      'theme2' => array_map(function (string $themeSlug) {
-                        return $themeSlug;
-                      },$project->themes()->yaml()),
-                      'themes' => $project->themes(),
-                      'axes' => $project->axes()->value(),
+                      'themes' => array_map(function (string $themeSlug) use ($kirby) {
+                        $themePage = $kirby->page( trim($themeSlug) );
+                        if($themePage == null) return null;
+                        return [
+                          'title' => $themePage->title()->value(),
+                        ];
+                      }, explode(',', $project->themes()->value())),
+                      'axes' => array_values($project->axes()->toPages()->map(function (\Kirby\Cms\Page $author) {
+                        return [
+                          'title'      => $author->title()->value(),
+                        ];
+                      })->data()),
                     ];
-                })
+                })->data()
 ]);
