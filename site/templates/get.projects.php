@@ -10,13 +10,15 @@ echo json_encode([
                     return [
                       'title' => $project->title()->value(),
 //                      todo: author to authors in blueprint
-                      'authors' => array_values($project->author()->toPages()->map(function (\Kirby\Cms\Page $author) {
-                                  return [
-                                      'author'      => $author->title(),
-                                      'firstname' => $author->firstname()->value(),
-                                      'Name'      => $author->name()->value(),
-                                    ];
-                              })->data()),
+                      'authors' => array_map(function (string $themeSlug) use ($kirby) {
+                        $author = $kirby->page( trim($themeSlug) );
+                        if($author == null) return null;
+                        return [
+                          'author'      => $author->title(),
+                          'firstname' => $author->firstname()->value(),
+                          'Name'      => $author->name()->value(),
+                        ];
+                      }, explode(',', $project->themes()->value())),
                       'cover' => getImageArrayDataInPage($project),
                       'themes' => array_map(function (string $themeSlug) use ($kirby) {
                         $themePage = $kirby->page( trim($themeSlug) );
