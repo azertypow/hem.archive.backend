@@ -18,8 +18,12 @@ echo json_encode([
                                     ];
                               })->data()),
                       'cover' => getImageArrayDataInPage($project),
+                      'theme1' => $project->themes(),
+                      'theme2' => array_map(function (string $themeSlug) {
+                        return $themeSlug;
+                      },$project->themes()->yaml()),
                       'themes' => $project->themes(),
-                      'axes' => $project->axes(),
+                      'axes' => $project->axes()->value(),
                     ];
                 })
 ]);

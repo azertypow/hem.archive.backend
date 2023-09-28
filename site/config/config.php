@@ -7,6 +7,9 @@
  * This setting must be set to false in production.
  * All config options: https://getkirby.com/docs/reference/system/options
  */
+
+use Kirby\Cms\Page;
+
 return [
     'debug' => true,
     'routes' => [
@@ -17,9 +20,12 @@ return [
             }
         ],
         [
-            'pattern' => '/api/v1/projects',
+            'pattern' => '/webapp/api/v1/projects',
             'action'  => function () {
-                return page('/api/v1/projects')->template('projects');
+                return new Page([
+                    'slug'      => 'projects',
+                    'template'  => 'get.projects',
+                ]);
             }
         ],
     ],
