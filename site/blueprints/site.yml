@@ -2,7 +2,7 @@ options:
   changeTitle: true
 
 columns:
-  - width: 1/3
+  - width: 1/4
     sections:
       projects:
         label: Projets de recherche
@@ -15,7 +15,7 @@ columns:
         layout: cards
         size: medium
         text: " "
-  - width: 1/3
+  - width: 1/4
     sections:
       about:
         label: À propos
@@ -28,7 +28,7 @@ columns:
         layout: cards
         size: medium
         text: " "
-  - width: 1/3
+  - width: 1/4
     sections:
       community:
         label: Communauté
@@ -42,7 +42,7 @@ columns:
         size: medium
         text: " "
 
-  - width: 1/3
+  - width: 1/4
     sections:
       themeList:
         label: Axes et thèmes de recherche
