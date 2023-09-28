@@ -22,6 +22,8 @@ return [
         [
             'pattern' => '/webapp/api/v1/projects',
             'action'  => function () {
+                header("Access-Control-Allow-Origin: *");
+
                 return new Page([
                     'slug'      => 'projects',
                     'template'  => 'get.projects',
