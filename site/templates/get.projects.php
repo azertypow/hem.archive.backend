@@ -18,7 +18,7 @@ echo json_encode([
                           'firstname' => $author->firstname()->value(),
                           'Name'      => $author->name()->value(),
                         ];
-                      }, explode(',', $project->themes()->value())),
+                      }, explode(',', $project->author()->value())),
                       'cover' => getImageArrayDataInPage($project),
                       'themes' => array_map(function (string $themeSlug) use ($kirby) {
                         $themePage = $kirby->page( trim($themeSlug) );
