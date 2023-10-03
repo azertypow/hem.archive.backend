@@ -23,6 +23,9 @@ columns:
           alt:
             label: Texte Alternative
             type: text
+          link:
+            type: text
+            icon: url
           photoCredit:
             label: Crédits
             type: text

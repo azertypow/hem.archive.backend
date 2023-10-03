@@ -1,0 +1,27 @@
+blueprint: page
+
+name: field.blocks.image.name
+icon: image
+preview: image
+fields:
+  image:
+    label: field.blocks.image.name
+    type: files
+    query: model.images
+    multiple: false
+    uploads:
+      template: blocks/image
+  caption:
+    label: Légende
+    type: textarea
+    size: medium
+  alt:
+    label: Texte Alternative
+    type: text
+  link:
+    type: text
+    icon: url
+  photoCredit:
+    label: Crédits
+    type: text
+    width: 2/3

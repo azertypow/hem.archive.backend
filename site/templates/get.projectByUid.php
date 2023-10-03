@@ -9,6 +9,8 @@ $pageUid = $page->pageUid();
 
 $project = $site->find('projects')->children()->find($pageUid);
 
+header('Content-Type: application/json');
+
 if($project == null) {
   echo json_encode([
     'error' => 'la page n\'existe pas',
@@ -29,6 +31,7 @@ if($project == null) {
     }, explode(',', $project->author()->value())),
     'dateStart' => $project->dateStart()->value(),
     'dateEnd'   => $project->dateEnd()->value(),
+    'showMonth' => $project->showMonth()->value(),
     'cover' => getImageArrayDataInPage($project),
     'themes' => array_map(function (string $themeSlug) use ($kirby) {
       $themePage = $kirby->page( trim($themeSlug) );
@@ -42,6 +45,43 @@ if($project == null) {
         'title'      => $author->title()->value(),
       ];
     })->data()),
+
+
+
+//    project content details
+    'partners'    => $project->partners()->value(),
+    'team'        => $project->team()->value(),
+    'financement' => $project->financement()->value(),
+    'content'     => $project->text()->toBlocks()->map(function($value) {
+
+      if( $value->type() == 'image' ) {
+        return getBlogContentImageType($value);
+      }
+
+      if( $value->type() == 'text' )
+        return [
+          'type'      => $value->type(),
+          'isHidden'  => $value->isHidden(),
+          'value'     => $value->text()->value(),
+        ];
+
+      if( $value->type() == 'gallery' )
+        return [
+          'type'  => $value->type(),
+          'isHidden' => $value->isHidden(),
+        ];
+
+      if( $value->type() == 'video' )
+        return [
+          'type'  => $value->type(),
+          'isHidden' => $value->isHidden(),
+        ];
+
+      return [
+        'type'  => $value->type(),
+//        'isHidden' => $value->isHidden(),
+      ];
+    })->data(),
   ]);
 }
 

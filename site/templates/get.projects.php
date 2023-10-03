@@ -22,6 +22,7 @@ echo json_encode([
                       }, explode(',', $project->author()->value())),
                       'dateStart' => $project->dateStart()->value(),
                       'dateEnd'   => $project->dateEnd()->value(),
+                      'showMonth' => $project->showMonth()->value(),
                       'cover' => getImageArrayDataInPage($project),
                       'themes' => array_map(function (string $themeSlug) use ($kirby) {
                         $themePage = $kirby->page( trim($themeSlug) );
