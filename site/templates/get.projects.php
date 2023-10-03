@@ -8,6 +8,7 @@ include_once '_phpTools/jsonEncodeKirbyContent.php';
 echo json_encode([
   'projects' => $site->find('projects')->children()->map(function (\Kirby\Cms\Page $project) use ($kirby, $site) {
                     return [
+                      'uid'   => $project->uid(),
                       'title' => $project->title()->value(),
 //                      todo: author to authors in blueprint
                       'authors' => array_map(function (string $themeSlug) use ($kirby) {

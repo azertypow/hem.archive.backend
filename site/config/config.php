@@ -30,6 +30,20 @@ return [
                 ]);
             }
         ],
+        [
+            'pattern' => '/webapp/api/v1/projectByUid/(:any)',
+            'action'  => function ($pageUid) {
+                header("Access-Control-Allow-Origin: *");
+
+                return new Page([
+                    'slug'      => 'project',
+                    'template'  => 'get.projectByUid',
+                    'content'   => [
+                        'pageUid'        => $pageUid,
+                    ],
+                ]);
+            }
+        ],
     ],
     'panel' => [
         'css' => '_custom-panel/main.css',
