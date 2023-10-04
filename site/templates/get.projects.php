@@ -29,11 +29,13 @@ echo json_encode([
                         if($themePage == null) return null;
                         return [
                           'title' => $themePage->title()->value(),
+                          'uid' => $themePage->uid(),
                         ];
                       }, explode(',', $project->themes()->value())),
                       'axes' => array_values($project->axes()->toPages()->map(function (\Kirby\Cms\Page $author) {
                         return [
                           'title'      => $author->title()->value(),
+                          'uid'        => $author->uid(),
                         ];
                       })->data()),
                     ];
