@@ -33,15 +33,12 @@ return [
         [
             'pattern' => '/webapp/api/v1/project-by-uid/(:any)',
             'action'  => function ($pageUid) {
+                include_once 'site/templates/get.project-by-uid.php';
                 header("Access-Control-Allow-Origin: *");
 
-                return new Page([
-                    'slug'      => 'project',
-                    'template'  => 'get.project-by-uid',
-                    'content'   => [
-                        'pageUid'        => $pageUid,
-                    ],
-                ]);
+                return \Kirby\Cms\Response::json(
+                    getProjectByUID($pageUid, kirby(), site())
+                );
             }
         ],
         [
