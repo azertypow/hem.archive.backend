@@ -48,12 +48,32 @@ if($project == null) {
       ];
     })->data()),
 
-
-
 //    project content details
     'partners'    => $project->partners()->value(),
     'team'        => $project->team()->value(),
     'financement' => $project->financement()->value(),
+
+    'filesChapters'            => $project->children()->map(function (\Kirby\Cms\Page $fileChapter){
+      return [
+        'title'       => $fileChapter->title()->value(),
+        'uid'         => $fileChapter->uid(),
+        'slug'        => $fileChapter->slug(),
+        'uri'         => $fileChapter->uri(),
+        'files'       => $fileChapter->files()->map(function (\Kirby\Cms\File $file) {
+          return [
+            'extension'   => $file->extension(),
+            'mime'        => $file->mime(),
+            'modified'    => $file->modified(),
+            'name'        => $file->name(),
+            'niceSize'    => $file->niceSize(),
+            'type'        => $file->type(),
+            'url'         => $file->url(),
+            'id'          => $file->id(),
+          ];
+        })->data(),
+      ];
+    })->data(),
+
     'content'     => $project->text()->toBlocks()->map(function($value) {
 
       if( $value->type() == 'image' ) {
@@ -77,6 +97,7 @@ if($project == null) {
         return [
           'type'  => $value->type(),
           'isHidden' => $value->isHidden(),
+          'content' => $value->content()->toArray(),
         ];
 
       return [

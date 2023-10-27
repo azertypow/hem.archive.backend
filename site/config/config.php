@@ -31,16 +31,27 @@ return [
             }
         ],
         [
-            'pattern' => '/webapp/api/v1/projectByUid/(:any)',
+            'pattern' => '/webapp/api/v1/project-by-uid/(:any)',
             'action'  => function ($pageUid) {
                 header("Access-Control-Allow-Origin: *");
 
                 return new Page([
                     'slug'      => 'project',
-                    'template'  => 'get.projectByUid',
+                    'template'  => 'get.project-by-uid',
                     'content'   => [
                         'pageUid'        => $pageUid,
                     ],
+                ]);
+            }
+        ],
+        [
+            'pattern' => '/webapp/api/v1/community',
+            'action'  => function () {
+                header("Access-Control-Allow-Origin: *");
+
+                return new Page([
+                    'slug'      => 'community',
+                    'template'  => 'get.community',
                 ]);
             }
         ],
