@@ -17,15 +17,16 @@ function getCommunityByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site
 
     return [
       'uid'           => $communityPage->uid(),
-      'uuid'          => $communityPage->uuid(),
-      'title'         => $communityPage->title(),
-      'firstname'     => $communityPage->firstname(),
-      'name'          => $communityPage->name(),
-      'bio'           => $communityPage->bio(),
-      'job'           => $communityPage->job(),
-      'jobdetail'     => $communityPage->jobdetail(),
-      'mail'          => $communityPage->mail(),
-      'publications'  => $communityPage->publications(),
+      'title'         => $communityPage->title()->value(),
+      'firstname'     => $communityPage->firstname()->value(),
+      'name'          => $communityPage->name()->value(),
+      'bio'           => $communityPage->bio()->value(),
+      'job'           => $communityPage->job()->value(),
+      'jobdetail'     => $communityPage->jobdetail()->value(),
+      'mail'          => $communityPage->mail()->value(),
+      'publications'  => $communityPage->publications()->toStructure()->map(
+        fn($item) => $item->toArray()
+      )->data(),
       'cover'         => getJsonEncodeImageData($communityPage->cover()->toFile()),
     ];
 
