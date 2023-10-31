@@ -52,6 +52,18 @@ return [
                 ]);
             }
         ],
+
+        [
+            'pattern' => '/webapp/api/v1/community-by-uid/(:any)',
+            'action'  => function ($pageUid) {
+                header("Access-Control-Allow-Origin: *");
+                include_once 'site/templates/get.community-by-uid.php';
+
+                return \Kirby\Cms\Response::json(
+                    getCommunityByUID($pageUid, kirby(), site())
+                );
+            }
+        ],
         [
             'pattern' => '/webapp/api/v1/connection',
             'action'  => function () {

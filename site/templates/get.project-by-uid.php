@@ -1,7 +1,4 @@
 <?php
-/** @global Kirby\Cms\App $kirby */
-/** @global Kirby\Cms\Site $site */
-/** @global Kirby\Cms\Page $page */
 
 include_once '_phpTools/jsonEncodeKirbyContent.php';
 
