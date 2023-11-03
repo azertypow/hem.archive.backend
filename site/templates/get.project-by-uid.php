@@ -52,6 +52,7 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
       'filesChapters' => $project->children()->map(function (\Kirby\Cms\Page $fileChapter) {
         return [
           'title' => $fileChapter->title()->value(),
+          'textDescription' => $fileChapter->textDescription()->value(),
           'uid' => $fileChapter->uid(),
           'slug' => $fileChapter->slug(),
           'uri' => $fileChapter->uri(),
