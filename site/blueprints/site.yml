@@ -9,7 +9,7 @@ columns:
         type: pages
         status: listed
         image:
-          query: page.children.first.cover.toFile
+          query: page.images.findBy("name", "cover")
           cover: true
         templates: projects
         layout: cards
@@ -22,7 +22,7 @@ columns:
         type: pages
         status: listed
         image:
-          query: page.children.first.cover.toFile
+          query: page.images.findBy("name", "cover")
           cover: true
         templates: about
         layout: cards
@@ -35,7 +35,7 @@ columns:
         type: pages
         status: listed
         image:
-          query: page.children.first.cover.toFile
+          query: page.images.findBy("name", "cover")
           cover: true
         templates: community
         layout: cards
@@ -49,7 +49,7 @@ columns:
         type: pages
         status: listed
         image:
-          query: page.children.first.cover.toFile
+          query: page.images.findBy("name", "cover")
           cover: true
         templates: theme-and-axes-list
         layout: cards
