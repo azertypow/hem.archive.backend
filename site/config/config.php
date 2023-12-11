@@ -64,17 +64,6 @@ return [
                 );
             }
         ],
-        [
-            'pattern' => '/webapp/api/v1/connection',
-            'action'  => function () {
-                header("Access-Control-Allow-Origin: *");
-
-                return new Page([
-                    'slug'      => 'auth',
-                    'template'  => 'post.auth',
-                ]);
-            }
-        ],
     ],
     'panel' => [
         'css' => '_custom-panel/main.css',
