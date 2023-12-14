@@ -52,7 +52,6 @@ return [
                 ]);
             }
         ],
-
         [
             'pattern' => '/webapp/api/v1/community-by-uid/(:any)',
             'action'  => function ($pageUid) {
@@ -62,6 +61,14 @@ return [
                 return \Kirby\Cms\Response::json(
                     getCommunityByUID($pageUid, kirby(), site())
                 );
+            }
+        ],
+        [
+            'pattern' => '/webapp/api/v1/tags',
+            'action'  => function () {
+                header("Access-Control-Allow-Origin: *");
+                include_once 'site/templates/get.tags.php';
+                return getTags(kirby(), site());
             }
         ],
     ],

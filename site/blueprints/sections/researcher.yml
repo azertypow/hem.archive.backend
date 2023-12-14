@@ -9,5 +9,5 @@ layout: cardlets
 image:
   query: page.cover.toFile
   cover: true
-  ratio: 3/1
+  ratio: 1/1
 

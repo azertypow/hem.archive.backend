@@ -18,7 +18,7 @@ columns:
 
       unlisted:
         extends: sections/researcher
-        label: En relecture
+        label: En attente de publication
         status: unlisted
 
   - width: 2/3
@@ -27,6 +27,8 @@ columns:
         extends: sections/researcher
         label: Publié
         status: listed
-        size: small
+        size: tiny
         layout: cards
         search: true
+        limit: 500
+

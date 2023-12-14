@@ -1,16 +1,16 @@
-.k-dropdown-content [data-disabled="true"] {
-  display: none;
-}
+/*.k-dropdown-content [data-disabled="true"] {*/
+/*  display: none;*/
+/*}*/
 
-.k-dropdown-content > hr {
-  display: none;
-}
+/*.k-dropdown-content > hr {*/
+/*  display: none;*/
+/*}*/
 
 
-.k-dialog-body .k-field[data-disabled=true] {
-  display: none;
-}
+/*.k-dialog-body .k-field[data-disabled=true] {*/
+/*  display: none;*/
+/*}*/
 
-.k-dialog-body .k-field-name-slug {
-  display: none;
-}
+/*.k-dialog-body .k-field-name-slug {*/
+/*  display: none;*/
+/*}*/
