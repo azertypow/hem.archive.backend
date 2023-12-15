@@ -22,4 +22,16 @@ columns:
         text: |
           ### Vous pouvez simplement modifier le titre de ce champs (titre ci-dessus).
           La référence de ce champs est **{{page.uuid}}**, et toutes les pages qui y sont liées garde cette référence.
-
+      theme:
+        type: multiselect
+        min: 1
+        max: 1
+        required: true
+        disabled: true
+        options:
+            green: vert
+            yellow: jaune
+            purple: violet
+            dark-green: vert-foncé
+            orange: orange
+            brick: brique
