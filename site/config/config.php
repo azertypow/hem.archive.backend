@@ -71,6 +71,14 @@ return [
                 return getTags(kirby(), site());
             }
         ],
+        [
+            'pattern' => '/webapp/api/v1/search',
+            'action'  => function () {
+                header("Access-Control-Allow-Origin: *");
+                include_once 'site/templates/get.search.php';
+                return getSearch(kirby(), site());
+            }
+        ],
     ],
     'panel' => [
         'css' => '_custom-panel/main.css',
