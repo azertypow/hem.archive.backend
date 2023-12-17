@@ -29,14 +29,19 @@ echo json_encode([
                         $themePage = $kirby->page( trim($themeSlug) );
                         if($themePage == null) return null;
                         return [
-                          'title' => $themePage->title()->value(),
-                          'uid' => $themePage->uid(),
+                          'title' =>  $themePage->title()->value(),
+                          'uid'   =>  $themePage->uid(),
+                          'uuid'  =>  $themePage->content()->uuid()->value(),
+                          'uri'   =>  $themePage->uri(),
                         ];
                       }, explode(',', $project->themes()->value())),
-                      'axes' => array_values($project->axes()->toPages()->map(function (\Kirby\Cms\Page $author) {
+                      'axes' => array_values($project->axes()->toPages()->map(function (\Kirby\Cms\Page $axePage) {
                         return [
-                          'title'      => $author->title()->value(),
-                          'uid'        => $author->uid(),
+                          'title' =>  $axePage->title()->value(),
+                          'uid'   =>  $axePage->uid(),
+                          'uuid'  =>  $axePage->content()->uuid()->value(),
+                          'uri'   =>  $axePage->uri(),
+                          'theme' =>  $axePage->theme()->value(),
                         ];
                       })->data()),
                     ];
