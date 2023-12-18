@@ -118,7 +118,7 @@ columns:
   - width: 2/3
     fields:
       connected:
-        required: true
+        required: false
         label: Projet(s) connecté(s)
         type: multiselect
         options:
