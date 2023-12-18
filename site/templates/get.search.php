@@ -13,7 +13,4 @@ function getSearch(Kirby\Cms\App $kirby, Kirby\Cms\Site $site): array
     'result'    => $result,
     'minLength' => $minLength,
   ];
-//  return [
-//    'result'  => page('projects')->children()->toArray(),
-//  ];
 }
