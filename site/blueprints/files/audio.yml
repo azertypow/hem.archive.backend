@@ -12,7 +12,7 @@ columns:
         type: fields
         fields:
           description:
-            label: Déscription
+            label: Légende
             type: writer
             nodes: false
             marks:
