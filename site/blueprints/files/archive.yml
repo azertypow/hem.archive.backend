@@ -11,7 +11,7 @@ columns:
       content:
         type: fields
         fields:
-          description:
+          caption:
             label: Légende
             type: writer
             nodes: false
