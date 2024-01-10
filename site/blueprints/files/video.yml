@@ -6,24 +6,17 @@ accept:
   mime: video/mp4
 
 columns:
-  - width: 1/2
+  - width: 2/3
     sections:
       content:
         type: fields
         fields:
-          caption:
-            label: Légende
-            type: textarea
-            size: medium
-  - width: 1/2
-    sections:
-      meta:
-        type: fields
-        fields:
-          alt:
-            label: Texte Alternative
-            type: text
-          photoCredit:
-            label: Crédits
-            type: text
-            width: 2/3
+          description:
+            label: Déscription
+            type: writer
+            nodes: false
+            marks:
+              - link
+              - bold
+              - italic
+              - underline

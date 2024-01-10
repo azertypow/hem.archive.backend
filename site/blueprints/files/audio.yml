@@ -1,9 +1,9 @@
-title: Pdf
+title: Archive
 
 accept:
-  type: document
-  extension: pdf
-  mime: application/pdf
+  type: audio
+  extension: mp3, mpga, mp1, mp2, m1a, m2a, mp3pro, mpc, m4a, wav, wave, ogg, oga, aac, adts, flac
+  mime: audio/mpeg, audio/wav, audio/ogg, audio/aac, audio/flac
 
 columns:
   - width: 2/3
