@@ -13,15 +13,10 @@ fields:
       template: blocks/image
   caption:
     label: Légende
-    type: textarea
-    size: medium
-  alt:
-    label: Texte Alternative
-    type: text
-  link:
-    type: text
-    icon: url
-  photoCredit:
-    label: Crédits
-    type: text
-    width: 2/3
+    type: writer
+    inline: true
+    marks:
+      - link
+      - bold
+      - italic
+      - underline

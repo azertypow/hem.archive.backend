@@ -1,0 +1,19 @@
+blueprint: page
+
+name: field.blocks.video.name
+icon: video
+preview: video
+fields:
+  url:
+    label: field.blocks.video.url.label
+    type: url
+    placeholder: field.blocks.video.url.placeholder
+  caption:
+    label: Légende
+    type: writer
+    inline: true
+    marks:
+      - link
+      - bold
+      - italic
+      - underline
