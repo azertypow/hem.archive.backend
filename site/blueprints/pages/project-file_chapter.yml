@@ -25,9 +25,7 @@ columns:
             type: writer
             inline: true
             marks:
-              - bold
               - italic
-              - link
             nodes: false
           liste:
             label: Liste
