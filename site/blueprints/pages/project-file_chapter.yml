@@ -13,6 +13,7 @@ columns:
           - link
           - bold
           - italic
+          - underline
       detailsListe:
         label: liste de détails
         type: structure
