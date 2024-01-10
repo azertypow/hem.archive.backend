@@ -70,14 +70,18 @@ columns:
             label: Partenaires
             type: list
             marks:
+              - link
               - bold
               - italic
+              - underline
           team:
             label: Équipe
             type: list
             marks:
               - link
+              - bold
               - italic
+              - underline
           financement:
             required: true
             label: Financement
@@ -85,13 +89,17 @@ columns:
             inline: true
             marks:
               - link
+              - bold
               - italic
+              - underline
           Publications:
             label: Publications
             type: list
             marks:
               - link
+              - bold
               - italic
+              - underline
           axes:
             required: true
             label: Axe de recherche

@@ -73,8 +73,10 @@ columns:
             type: writer
             inline: true
             marks:
-              - italic
               - link
+              - bold
+              - italic
+              - underline
           publicationLink:
             label: Lien externe
             type: url

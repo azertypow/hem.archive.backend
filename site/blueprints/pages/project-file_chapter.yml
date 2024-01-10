@@ -34,8 +34,10 @@ columns:
             label: Liste
             type: list
             marks:
+              - link
               - bold
               - italic
+              - underline
   - width: 4/4
     fields:
       archiveFiles:
