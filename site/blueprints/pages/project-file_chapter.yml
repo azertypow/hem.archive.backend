@@ -8,7 +8,9 @@ columns:
       textDescription:
         label: Texte de description
         type: writer
-        nodes: false
+        nodes:
+          - bulletList
+          - paragraph
         marks:
           - link
           - bold
