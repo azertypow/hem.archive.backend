@@ -93,6 +93,7 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
           return [
             'type' => $value->type(),
             'isHidden' => $value->isHidden(),
+            'content' => $value->content()->toArray(),
           ];
 
         if ($value->type() == 'video')
