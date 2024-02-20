@@ -15,7 +15,7 @@ function getAbout(Kirby\Cms\App $kirby, Kirby\Cms\Site $site): array
     return [
       'uid'           => $aboutPage->uid(),
       'title'         => $aboutPage->title()->value(),
-      'abouttext'     => $aboutPage->abouttext()->toBlocks()->map(function ($value) {
+      'abouttext'     => array_values($aboutPage->abouttext()->toBlocks()->map(function ($value) {
 
         if ($value->type() == 'image') {
           return getBlogContentImageType($value);
@@ -47,7 +47,7 @@ function getAbout(Kirby\Cms\App $kirby, Kirby\Cms\Site $site): array
           'content' => $value->content()->toArray(),
           'isHidden' => $value->isHidden(),
         ];
-      })->data(),
+      })->data()),
     ];
 
   }
