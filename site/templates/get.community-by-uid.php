@@ -35,7 +35,7 @@ function getCommunityByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site
       'publications'  => $communityPage->publications()->toStructure()->map(
         fn($item) => $item->toArray()
       )->data(),
-      'cover'         => getJsonEncodeImageData($communityPage->cover()->toFile()),
+      'cover'         => $communityPage->cover()->toFile() ? getJsonEncodeImageData($communityPage->cover()->toFile()) : null,
     ];
   }
 }
