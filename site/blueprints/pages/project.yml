@@ -92,7 +92,7 @@ columns:
               - bold
               - italic
               - underline
-          Publications:
+          publications:
             label: Publications
             type: list
             marks:
