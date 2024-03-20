@@ -72,6 +72,7 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
               'type' => $file->type(),
               'url' => $file->url(),
               'id' => $file->id(),
+              'caption' => $file->caption()->value(),
             ];
           })->data(),
         ];
