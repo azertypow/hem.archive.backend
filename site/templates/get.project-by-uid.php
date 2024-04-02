@@ -65,7 +65,7 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
           'detailsListe' => $fileChapter->detailsListe()->toStructure()->map(
             fn($item) => $item->toArray()
           )->data(),
-          'files' => $fileChapter->files()->map(function (\Kirby\Cms\File $file) {
+          'files' => $fileChapter->archivefiles()->toFiles()->map(function (\Kirby\Cms\File $file) {
             return [
               'extension' => $file->extension(),
               'mime' => $file->mime(),
