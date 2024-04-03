@@ -65,7 +65,59 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
           'detailsListe' => $fileChapter->detailsListe()->toStructure()->map(
             fn($item) => $item->toArray()
           )->data(),
-          'files' => $fileChapter->archivefiles()->toFiles()->map(function (\Kirby\Cms\File $file) {
+          'archiveFiles' => $fileChapter->archivefiles()->toFiles()->map(function (\Kirby\Cms\File $file) {
+            return [
+              'extension' => $file->extension(),
+              'mime' => $file->mime(),
+              'modified' => $file->modified(),
+              'name' => $file->name(),
+              'niceSize' => $file->niceSize(),
+              'type' => $file->type(),
+              'url' => $file->url(),
+              'id' => $file->id(),
+              'caption' => $file->caption()->value(),
+            ];
+          })->data(),
+          'imagesFiles' => $fileChapter->imagesFiles()->toFiles()->map(function (\Kirby\Cms\File $file) {
+            return [
+              'extension' => $file->extension(),
+              'mime' => $file->mime(),
+              'modified' => $file->modified(),
+              'name' => $file->name(),
+              'niceSize' => $file->niceSize(),
+              'type' => $file->type(),
+              'url' => $file->url(),
+              'id' => $file->id(),
+              'caption' => $file->caption()->value(),
+            ];
+          })->data(),
+          'videoFiles' => $fileChapter->videoFiles()->toFiles()->map(function (\Kirby\Cms\File $file) {
+            return [
+              'extension' => $file->extension(),
+              'mime' => $file->mime(),
+              'modified' => $file->modified(),
+              'name' => $file->name(),
+              'niceSize' => $file->niceSize(),
+              'type' => $file->type(),
+              'url' => $file->url(),
+              'id' => $file->id(),
+              'caption' => $file->caption()->value(),
+            ];
+          })->data(),
+          'audioFiles' => $fileChapter->audioFiles()->toFiles()->map(function (\Kirby\Cms\File $file) {
+            return [
+              'extension' => $file->extension(),
+              'mime' => $file->mime(),
+              'modified' => $file->modified(),
+              'name' => $file->name(),
+              'niceSize' => $file->niceSize(),
+              'type' => $file->type(),
+              'url' => $file->url(),
+              'id' => $file->id(),
+              'caption' => $file->caption()->value(),
+            ];
+          })->data(),
+          'pdfFiles' => $fileChapter->pdfFiles()->toFiles()->map(function (\Kirby\Cms\File $file) {
             return [
               'extension' => $file->extension(),
               'mime' => $file->mime(),
