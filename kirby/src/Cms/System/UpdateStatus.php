@@ -158,7 +158,9 @@ class UpdateStatus
 		// collect all matching custom messages
 		$filters = [
 			'kirby' => $this->app->version(),
-			'php'   => phpversion()
+			// some PHP version strings contain extra info that makes them
+			// invalid so we need to strip it off
+			'php'   => preg_replace('/^([^~+-]+).*$/', '$1', phpversion())
 		];
 
 		if ($type === 'plugin') {
@@ -204,6 +206,20 @@ class UpdateStatus
 				'link' => $versionEntry['status-link'] ?? 'https://getkirby.com/security/end-of-life',
 				'icon' => 'bell'
 			];
+		}
+
+		// add special message for end-of-life PHP versions
+		$phpMajor = PHP_MAJOR_VERSION . '.' . PHP_MINOR_VERSION;
+		$phpEol   = $this->data['php'][$phpMajor] ?? null;
+		if (is_string($phpEol) === true && $eolTime = strtotime($phpEol)) {
+			// the timestamp is available and valid, now check if it is in the past
+			if ($eolTime < time()) {
+				$messages[] = [
+					'text' => I18n::template('system.issues.eol.php', null, ['release' => $phpMajor]),
+					'link' => 'https://getkirby.com/security/php-end-of-life',
+					'icon' => 'bell'
+				];
+			}
 		}
 
 		return $this->messages = $messages;
