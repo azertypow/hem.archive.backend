@@ -163,10 +163,7 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
             'content' => $value->content()->toArray(),
           ];
 
-        return [
-          'type' => $value->type(),
-//        'isHidden' => $value->isHidden(),
-        ];
+        return $value->toArray();
       })->data(),
     ];
   }

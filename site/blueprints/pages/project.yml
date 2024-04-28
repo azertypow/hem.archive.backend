@@ -32,6 +32,7 @@ columns:
           - image
           - gallery
           - video
+          - code
 
   - width: 1/3
     sections:
