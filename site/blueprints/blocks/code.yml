@@ -1,0 +1,21 @@
+name: field.blocks.code.name
+icon: code
+wysiwyg: true
+preview: code
+fields:
+  code:
+    label: field.blocks.code.name
+    type: textarea
+    placeholder: field.blocks.code.placeholder
+    buttons: false
+    font: monospace
+  caption:
+    label: Légende
+    type: writer
+    inline: true
+    marks:
+      - link
+      - bold
+      - italic
+      - underline
+
