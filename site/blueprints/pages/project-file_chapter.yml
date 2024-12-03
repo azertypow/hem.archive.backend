@@ -5,6 +5,9 @@ icon: 📖
 columns:
   - width: 1
     fields:
+      gap_title:
+        type: gap
+        width: 1/2
       title_EN:
         width: 1/2
         type: text
