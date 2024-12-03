@@ -126,9 +126,12 @@
 	"error.form.notSaved": "Formulir tidak dapat disimpan",
 
 	"error.language.code": "Masukkan kode bahasa yang valid",
+	"error.language.create.permission": "You are not allowed to create a language",
+	"error.language.delete.permission": "You are not allowed to delete the language",
 	"error.language.duplicate": "Bahasa sudah ada",
 	"error.language.name": "Masukkan nama bahasa yang valid",
 	"error.language.notFound": "Bahasa tidak ditemukan",
+	"error.language.update.permission": "You are not allowed to update the language",
 
 	"error.layout.validation.block": "Ada kesalahan pada bidang \"{field}\" di blok {blockIndex} menggunakan tipe blok \"{fieldset}\" di tata letak {layoutIndex}",
 	"error.layout.validation.settings": "Ada kesalahan di pengaturan tata letak {index}",
@@ -386,7 +389,6 @@
 	"installation.issues.mbstring": "Ekstensi <code>MB String</code> diperlukan",
 	"installation.issues.media": "Folder <code>/media</code> tidak ada atau tidak dapat ditulis",
 	"installation.issues.php": "Pastikan Anda menggunakan <code>PHP 8+</code>",
-	"installation.issues.server": "Kirby memerlukan <code>Apache</code>, <code>Nginx</code>, atau <code>Caddy</code>",
 	"installation.issues.sessions": "Folder <code>/site/sessions</code> tidak ada atau tidak dapat ditulis",
 
 	"language": "Bahasa",
@@ -618,6 +620,8 @@
 	"stats.empty": "Tidak ada laporan",
 	"status": "Status",
 
+	"system.info.copy": "Copy info",
+	"system.info.copied": "System info copied",
 	"system.issues.content": "Folder konten nampaknya terekspos",
 	"system.issues.eol.kirby": "Versi instalasi Kirby Anda sudah mencapai akhir dan tidak akan lagi mendapat pembaruan keamanan",
 	"system.issues.eol.plugin": "Versi instalasi plugin { plugin } Anda sudah mencapai akhir dan tidak akan lagi mendapatkan pembaruan keamanan",

@@ -386,10 +386,13 @@ class Str
 		$encoded = '';
 
 		for ($i = 0; $i < static::length($string); $i++) {
-			$char = static::substr($string, $i, 1);
-			$char = mb_convert_encoding($char, 'UCS-4BE', 'UTF-8');
-			list(, $code) = unpack('N', $char);
-			$encoded .= rand(1, 2) === 1 ? '&#' . $code . ';' : '&#x' . dechex($code) . ';';
+			$char     = static::substr($string, $i, 1);
+			$char     = mb_convert_encoding($char, 'UCS-4BE', 'UTF-8');
+			[, $code] = unpack('N', $char);
+			$encoded .= match (random_int(1, 2)) {
+				1 => '&#' . $code . ';',
+				2 => '&#x' . dechex($code) . ';'
+			};
 		}
 
 		return $encoded;
@@ -1129,7 +1132,7 @@ class Str
 		string $string = null,
 		string $separator = null,
 		string $allowed = null,
-		int $maxlength = 128
+		int|false $maxlength = 128
 	): string {
 		$separator ??= static::$defaults['slug']['separator'];
 		$allowed   ??= static::$defaults['slug']['allowed'];
@@ -1162,7 +1165,11 @@ class Str
 		$string = preg_replace('![^a-z0-9]+$!', '', $string);
 
 		// cut the string after the given maxlength
-		return static::short($string, $maxlength, '');
+		if ($maxlength !== false) {
+			$string = static::short($string, $maxlength, '');
+		}
+
+		return $string;
 	}
 
 	/**

@@ -126,9 +126,12 @@
 	"error.form.notSaved": "Formos nepavyko išsaugoti",
 
 	"error.language.code": "Prašome įrašyti teisingą kalbos kodą",
+	"error.language.create.permission": "You are not allowed to create a language",
+	"error.language.delete.permission": "You are not allowed to delete the language",
 	"error.language.duplicate": "Tokia kalba jau yra",
 	"error.language.name": "Prašome įrašyti teisingą kalbos pavadinimą",
 	"error.language.notFound": "Nepavyko rasti šios kalbos",
+	"error.language.update.permission": "You are not allowed to update the language",
 
 	"error.layout.validation.block": "There's an error on the \"{field}\" field in block {blockIndex} using the \"{fieldset}\" block type in layout {layoutIndex}",
 	"error.layout.validation.settings": "Yra klaida išdėstymo {index} nustatymuose",
@@ -386,7 +389,6 @@
 	"installation.issues.mbstring": "Plėtinys <code>MB String</code> yra privalomas",
 	"installation.issues.media": "Katalogas <code>/media</code> neegzistuoja arba neturi įrašymo teisių",
 	"installation.issues.php": "Įsitikinkite, kad naudojama <code>PHP 8+</code>",
-	"installation.issues.server": "Kirby reikalauja <code>Apache</code>, <code>Nginx</code> arba <code>Caddy</code>",
 	"installation.issues.sessions": "Katalogas <code>/site/sessions</code> neegzistuoja arba neturi įrašymo teisių",
 
 	"language": "Kalba",
@@ -618,6 +620,8 @@
 	"stats.empty": "Nėra pranešimų",
 	"status": "Statusas",
 
+	"system.info.copy": "Copy info",
+	"system.info.copied": "System info copied",
 	"system.issues.content": "The content folder seems to be exposed",
 	"system.issues.eol.kirby": "Your installed Kirby version has reached end-of-life and will not receive further security updates",
 	"system.issues.eol.plugin": "Your installed version of the { plugin } plugin is has reached end-of-life and will not receive further security updates",
