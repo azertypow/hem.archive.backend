@@ -1,4 +1,17 @@
-# The blocks/image template is automatically assigned to all uploaded
-# images in the blocks field. We don't really need a separate blueprint
-# for this and can therefor extend the already existing files/image blueprint
-extends: files/image
+title: Image
+
+accept:
+  type: image
+  extension: jpg, png, jpeg
+  mime: image/jpeg, image/png
+
+columns:
+  - width: 2/3
+    sections:
+      content:
+        type: fields
+        fields:
+          info:
+            type: info
+            label: Pas de metadata
+            text: Pas d'information pour les média liés à des block
