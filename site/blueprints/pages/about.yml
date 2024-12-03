@@ -21,7 +21,14 @@ tabs:
     fields:
       aboutText:
         type: blocks
-        label: Description pour la partie à propos
+        label: Description pour la partie à propos [FR]
+        fieldsets:
+          - text
+          - image
+          - heading
+      aboutText_EN:
+        type: blocks
+        label: Description pour la partie à propos [EN]
         fieldsets:
           - text
           - image

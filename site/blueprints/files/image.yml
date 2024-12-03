@@ -12,9 +12,18 @@ columns:
         type: fields
         fields:
           caption:
-            label: Légende
+            label: Légende [FR]
             type: writer
             nodes: false
+            marks:
+              - link
+              - bold
+              - italic
+              - underline
+          caption_EN:
+            label: Légende [EN]
+            type: writer
+            inline: true
             marks:
               - link
               - bold

@@ -40,7 +40,7 @@ columns:
     fields:
       bio:
         type: writer
-        label: Biographie
+        label: Biographie [FR]
         nodes:
           - bulletList
           - paragraph
@@ -50,14 +50,36 @@ columns:
           - link
           - email
           - underline
+      bio_EN:
+        type: writer
+        label: Biographie [EN]
+        nodes:
+          - bulletList
+          - paragraph
+        marks:
+          - bold
+          - italic
+          - link
+          - email
+          - underline
+
   - width: 1/3
     fields:
       job:
         type: text
-        label: Fonction
+        label: Fonction [FR]
+      job_EN:
+        type: text
+        label: Fonction [EN]
+
       jobDetail:
         type: text
-        label: Détail de la fonction
+        label: Détail de la fonction [FR]
+      jobDetail_EN:
+        type: text
+        label: Détail de la fonction [EN]
+
+
       mail:
         type: email
         label: Email

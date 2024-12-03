@@ -20,13 +20,25 @@ status:
 columns:
   - width: 2/3
     fields:
+      pageTitle_EN:
+        type: text
+        label: Titre du projet [EN]
       info:
         label: Note pour l'italique dans le titre
         type: info
         text: Ajouter le caractère "*" autour d'un mot ou groupe de mots que vous souhaitez mettre en italique.
       text:
         type: blocks
-        label: Résumé du projet
+        label: Résumé du projet [FR]
+        fieldsets:
+          - text
+          - image
+          - gallery
+          - video
+          - code
+      text_EN:
+        type: blocks
+        label: Résumé du projet [EN]
         fieldsets:
           - text
           - image

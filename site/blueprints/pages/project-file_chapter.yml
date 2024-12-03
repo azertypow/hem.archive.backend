@@ -3,10 +3,19 @@ title: Project
 icon: 📖
 
 columns:
-  - width: 2/3
+  - width: 1
     fields:
+      pageTitle:
+        width: 1/2
+        type: text
+        label: Titre du projet [FR]
+      pageTitle_EN:
+        width: 1/2
+        type: text
+        label: Titre du projet [EN]
       textDescription:
-        label: Texte de description
+        width: 1/2
+        label: Texte de description [FR]
         type: writer
         nodes:
           - bulletList
@@ -16,8 +25,22 @@ columns:
           - bold
           - italic
           - underline
+      textDescription_EN:
+        width: 1/2
+        label: Texte de description [EN]
+        type: writer
+        nodes:
+          - bulletList
+          - paragraph
+        marks:
+          - link
+          - bold
+          - italic
+          - underline
+
       detailsListe:
-        label: liste de détails
+        width: 1/2
+        label: liste de détails [FR]
         type: structure
         columns:
           title:
@@ -38,6 +61,30 @@ columns:
               - bold
               - italic
               - underline
+      detailsListe_EN:
+        width: 1/2
+        label: liste de détails [EN]
+        type: structure
+        columns:
+          title:
+            width: 1/1
+        fields:
+          title:
+            label: Titre
+            type: writer
+            inline: true
+            marks:
+              - italic
+            nodes: false
+          liste:
+            label: Liste
+            type: list
+            marks:
+              - link
+              - bold
+              - italic
+              - underline
+
   - width: 4/4
     fields:
       archiveFiles:
