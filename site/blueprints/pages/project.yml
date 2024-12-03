@@ -20,7 +20,7 @@ status:
 columns:
   - width: 2/3
     fields:
-      pageTitle_EN:
+      title_EN:
         type: text
         label: Titre du projet [EN]
       info:

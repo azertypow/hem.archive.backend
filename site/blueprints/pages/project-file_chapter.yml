@@ -5,11 +5,7 @@ icon: 📖
 columns:
   - width: 1
     fields:
-      pageTitle:
-        width: 1/2
-        type: text
-        label: Titre du projet [FR]
-      pageTitle_EN:
+      title_EN:
         width: 1/2
         type: text
         label: Titre du projet [EN]
