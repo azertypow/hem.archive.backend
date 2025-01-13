@@ -11,7 +11,7 @@ columns:
       title_EN:
         width: 1/2
         type: text
-        label: Titre du projet [EN]
+        label: Titre du chapitre [EN]
       textDescription:
         width: 1/2
         label: Texte de description [FR]
