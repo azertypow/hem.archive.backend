@@ -45,7 +45,7 @@ columns:
   - width: 1/4
     sections:
       themeList:
-        label: Axes et thèmes de recherche
+        label: Thématiques
         type: pages
         status: listed
         image:
