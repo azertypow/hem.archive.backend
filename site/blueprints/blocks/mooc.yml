@@ -6,7 +6,7 @@ fields:
     type: text
     label: Titre
     required: true
-  image:
+  array_cover:
     label: Image de couverture
     type: files
     query: model.images
