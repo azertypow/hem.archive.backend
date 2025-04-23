@@ -1,0 +1,29 @@
+name: Mooc
+icon: text
+wysiwyg: true
+fields:
+  mooc_title:
+    type: text
+    label: Titre
+    required: true
+  image:
+    label: Image de couverture
+    type: files
+    query: model.images
+    multiple: false
+    required: true
+    uploads:
+      template: blocks/image
+  url:
+    label: lien du mooc
+    type: url
+    required: true
+  caption:
+    label: Légende
+    type: writer
+    inline: true
+    marks:
+      - link
+      - bold
+      - italic
+      - underline

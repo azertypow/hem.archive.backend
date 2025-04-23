@@ -150,6 +150,15 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
           return getBlogContentImageType($value);
         }
 
+        if ($value->type() == 'mooc') return [
+          'type' => $value->type(),
+          'isHidden' => $value->isHidden(),
+          'content' => $value->content()->toArray(),
+          'array_cover' => array_values($value->content()->array_cover()->toFiles()->map(
+            fn($file) => getJsonEncodeImageData($file)
+          )->data())
+        ];
+
         if ($value->type() == 'text')
           return [
             'type' => $value->type(),

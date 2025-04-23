@@ -36,6 +36,7 @@ columns:
           - gallery
           - video
           - code
+          - mooc
       text_EN:
         type: blocks
         label: Résumé du projet [EN]
@@ -45,6 +46,7 @@ columns:
           - gallery
           - video
           - code
+          - mooc
 
   - width: 1/3
     sections:
@@ -56,12 +58,7 @@ columns:
             extends: fields/cover
           dateStart:
             required: true
-            label: Date de commencement
-            type: date
-            default: now
-            display: YYYY-MM
-          dateEnd:
-            label: Date de fin
+            label: Date de publication
             type: date
             default: now
             display: YYYY-MM
