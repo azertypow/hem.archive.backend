@@ -15,6 +15,7 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
     return [
       'uid' => $project->uid(),
       'title' => $project->title()->value(),
+      'title_EN'  => $project->content()->title_EN()->value(),
 //                      todo: author to authors in blueprint
       'authors' => array_map(function (string $themeSlug) use ($kirby) {
         $author = $kirby->page(trim($themeSlug));
@@ -76,6 +77,7 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
               'url' => $file->url(),
               'id' => $file->id(),
               'caption' => $file->caption()->value(),
+              'caption_en' => $file->caption_en()->value(),
             ];
           })->data(),
           'imagesFiles' => $fileChapter->imagesFiles()->toFiles()->map(function (\Kirby\Cms\File $file) {
@@ -89,6 +91,7 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
               'url' => $file->url(),
               'id' => $file->id(),
               'caption' => $file->caption()->value(),
+              'caption_en' => $file->caption_en()->value(),
             ];
           })->data(),
           'videoFiles' => $fileChapter->videoFiles()->toFiles()->map(function (\Kirby\Cms\File $file) {
@@ -102,6 +105,7 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
               'url' => $file->url(),
               'id' => $file->id(),
               'caption' => $file->caption()->value(),
+              'caption_en' => $file->caption_en()->value(),
             ];
           })->data(),
           'audioFiles' => $fileChapter->audioFiles()->toFiles()->map(function (\Kirby\Cms\File $file) {
@@ -115,6 +119,7 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
               'url' => $file->url(),
               'id' => $file->id(),
               'caption' => $file->caption()->value(),
+              'caption_en' => $file->caption_en()->value(),
             ];
           })->data(),
           'pdfFiles' => $fileChapter->pdfFiles()->toFiles()->map(function (\Kirby\Cms\File $file) {
@@ -128,6 +133,7 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
               'url' => $file->url(),
               'id' => $file->id(),
               'caption' => $file->caption()->value(),
+              'caption_en' => $file->caption_en()->value(),
             ];
           })->data(),
         ];
