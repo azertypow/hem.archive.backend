@@ -21,8 +21,11 @@ function getCommunityByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site
       'firstname'     => $communityPage->firstname()->value(),
       'name'          => $communityPage->name()->value(),
       'bio'           => $communityPage->bio()->value(),
+      'bio_EN'           => $communityPage->bio_EN()->value(),
       'job'           => $communityPage->job()->value(),
-      'jobdetail'     => $communityPage->jobdetail()->value(),
+      'job_en'           => $communityPage->job_en()->value(),
+      'jobdetail'         => $communityPage->jobdetail()->value(),
+      'jobDetail_EN'      => $communityPage->jobDetail_EN()->value(),
       'mail'          => $communityPage->mail()->value(),
       'researchProject' => $site->find('projects')->children()->filter(
         function ($projectItem) use ($communityPage) {

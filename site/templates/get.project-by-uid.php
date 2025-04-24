@@ -58,12 +58,17 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
 
       'filesChapters' => $project->children()->map(function (\Kirby\Cms\Page $fileChapter) {
         return [
-          'title' => $fileChapter->title()->value(),
-          'textDescription' => $fileChapter->textDescription()->value(),
+          'title'     => $fileChapter->title()->value(),
+          'title_en'  => $fileChapter->title_en()->value(),
+          'textDescription'     => $fileChapter->textDescription()->value(),
+          'textDescription_EN'  => $fileChapter->textDescription_EN()->value(),
           'uid' => $fileChapter->uid(),
           'slug' => $fileChapter->slug(),
           'uri' => $fileChapter->uri(),
           'detailsListe' => $fileChapter->detailsListe()->toStructure()->map(
+            fn($item) => $item->toArray()
+          )->data(),
+          'detailsListe_EN' => $fileChapter->detailsListe_EN()->toStructure()->map(
             fn($item) => $item->toArray()
           )->data(),
           'archiveFiles' => $fileChapter->archivefiles()->toFiles()->map(function (\Kirby\Cms\File $file) {
@@ -140,6 +145,39 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
       })->data(),
 
       'content' => $project->text()->toBlocks()->map(function ($value) {
+
+        if ($value->type() == 'image') {
+          return getBlogContentImageType($value);
+        }
+
+        if ($value->type() == 'text')
+          return [
+            'type' => $value->type(),
+            'isHidden' => $value->isHidden(),
+            'value' => $value->text()->value(),
+          ];
+
+        if ($value->type() == 'gallery')
+          return [
+            'type' => $value->type(),
+            'isHidden' => $value->isHidden(),
+            'content' => array_values($value->content()->images()->toFiles()->map(
+              fn($file) => getJsonEncodeImageData($file)
+            )->data()),
+            'caption' => $value->caption()->value(),
+          ];
+
+        if ($value->type() == 'video')
+          return [
+            'type' => $value->type(),
+            'isHidden' => $value->isHidden(),
+            'content' => $value->content()->toArray(),
+          ];
+
+        return $value->toArray();
+      })->data(),
+
+      'text_en' => $project->text_EN()->toBlocks()->map(function ($value) {
 
         if ($value->type() == 'image') {
           return getBlogContentImageType($value);
