@@ -11,6 +11,7 @@ echo json_encode([
                       'status' => $project->status(),
                       'uid'   => $project->uid(),
                       'title' => $project->title()->value(),
+                      'title_EN' => $project->title_EN()->value(),
 //                      todo: author to authors in blueprint
                       'authors' => array_map(function (string $themeSlug) use ($kirby) {
                         $author = $kirby->page( trim($themeSlug) );
