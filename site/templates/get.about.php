@@ -48,6 +48,39 @@ function getAbout(Kirby\Cms\App $kirby, Kirby\Cms\Site $site): array
           'isHidden' => $value->isHidden(),
         ];
       })->data()),
+      'abouttext_en'     => array_values($aboutPage->abouttext_en()->toBlocks()->map(function ($value) {
+
+        if ($value->type() == 'image') {
+          return getBlogContentImageType($value);
+        }
+
+        if ($value->type() == 'text')
+          return [
+            'type' => $value->type(),
+            'isHidden' => $value->isHidden(),
+            'value' => $value->text()->value(),
+          ];
+
+        if ($value->type() == 'gallery')
+          return [
+            'type' => $value->type(),
+            'isHidden' => $value->isHidden(),
+            'content' => $value->content()->toArray(),
+          ];
+
+        if ($value->type() == 'video')
+          return [
+            'type' => $value->type(),
+            'isHidden' => $value->isHidden(),
+            'content' => $value->content()->toArray(),
+          ];
+
+        return [
+          'type' => $value->type(),
+          'content' => $value->content()->toArray(),
+          'isHidden' => $value->isHidden(),
+        ];
+      })->data()),
     ];
 
   }
