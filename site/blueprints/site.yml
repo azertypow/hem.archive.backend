@@ -5,7 +5,7 @@ columns:
   - width: 1/4
     sections:
       projects:
-        label: Contenus pédagogiques
+        label: Projets de recherche
         type: pages
         status: listed
         image:
