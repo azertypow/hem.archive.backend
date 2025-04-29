@@ -58,7 +58,12 @@ columns:
             extends: fields/cover
           dateStart:
             required: true
-            label: Date de publication
+            label: Date de commencement
+            type: date
+            default: now
+            display: YYYY-MM
+          dateEnd:
+            label: Date de fin
             type: date
             default: now
             display: YYYY-MM
