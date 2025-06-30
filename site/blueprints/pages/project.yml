@@ -35,6 +35,7 @@ columns:
           - image
           - gallery
           - video
+          - video-gallery
           - code
           - mooc
       text_EN:
@@ -45,6 +46,7 @@ columns:
           - image
           - gallery
           - video
+          - video-gallery
           - code
           - mooc
 

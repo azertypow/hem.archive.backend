@@ -1,0 +1,18 @@
+blueprint: page
+
+name: gallerie vidéo
+icon: video
+preview: fields
+wysiwyg: true
+fields:
+  video_list:
+    type: structure
+    label: list des videos YouTube
+    fields:
+      url:
+        label: field.blocks.video.url.label
+        type: url
+        placeholder: field.blocks.video.url.placeholder
+      info:
+        type: info
+        text: lien video YouTube
