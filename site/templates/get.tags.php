@@ -20,6 +20,7 @@ function getTags(Kirby\Cms\App $kirby, Kirby\Cms\Site $site): array
         })->map(function (\Kirby\Cms\Page $themeItem) {
           return [
             'title' => $themeItem->content()->title()->value(),
+            'title_EN' => $themeItem->content()->title_EN()->value(),
             'uuid' => $themeItem->content()->uuid()->value(),
             'uri' => $themeItem->uri(),
             'theme'  => $themeItem->theme()->value(),
@@ -36,6 +37,7 @@ function getTags(Kirby\Cms\App $kirby, Kirby\Cms\Site $site): array
         })->map(function (\Kirby\Cms\Page $themeItem) {
           return [
             'title' => $themeItem->content()->title()->value(),
+            'title_EN' => $themeItem->content()->title_EN()->value(),
             'uuid' => $themeItem->content()->uuid()->value(),
             'uri' => $themeItem->uri(),
           ];

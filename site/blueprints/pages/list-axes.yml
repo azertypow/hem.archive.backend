@@ -22,6 +22,9 @@ columns:
         text: |
           ### Vous pouvez simplement modifier le titre de ce champs (titre ci-dessus).
           La référence de ce champs est **{{page.uuid}}**, et toutes les pages qui y sont liées garde cette référence.
+      title_EN:
+        type: text
+        label: Titre de l'axe [EN]
       theme:
         type: multiselect
         min: 1
