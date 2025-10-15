@@ -24,6 +24,10 @@ columns:
           - bold
           - italic
           - underline
+          - '|'
+          - sup
+          - sub
+          - '|'
       textDescription_EN:
         width: 1/2
         label: Texte de description [EN]
@@ -36,6 +40,10 @@ columns:
           - bold
           - italic
           - underline
+          - '|'
+          - sup
+          - sub
+          - '|'
 
       detailsListe:
         width: 1/2
