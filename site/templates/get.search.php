@@ -10,7 +10,7 @@ function getSearch(Kirby\Cms\App $kirby, Kirby\Cms\Site $site): array
   $query   = get('q');
   $minLength = 2;
   $result = page('projects')->children()->listed()->search($query, [
-    'fields' => ['title', 'text'],
+    'fields' => ['title', 'text', 'text', 'text_EN'],
     'words' => true,
     'minlength' => 2,
     'stopwords' => [
