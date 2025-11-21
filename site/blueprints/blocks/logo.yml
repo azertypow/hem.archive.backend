@@ -1,6 +1,6 @@
 blueprint: page
 
-name: field.blocks.image.name
+name: logo
 icon: image
 preview: image
 fields:
@@ -14,12 +14,3 @@ fields:
   alt:
     label: "text alternatif"
     type: text
-  caption:
-    label: Légende
-    type: writer
-    inline: true
-    marks:
-      - link
-      - bold
-      - italic
-      - underline

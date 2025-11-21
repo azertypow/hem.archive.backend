@@ -26,6 +26,7 @@ tabs:
           - text
           - image
           - heading
+          - logo
       aboutText_EN:
         type: blocks
         label: Description pour la partie à propos [EN]
@@ -33,3 +34,4 @@ tabs:
           - text
           - image
           - heading
+          - logo
