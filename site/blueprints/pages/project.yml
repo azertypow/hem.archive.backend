@@ -37,6 +37,7 @@ columns:
           - video
           - code
           - mooc
+          - logo
       text_EN:
         type: blocks
         label: Résumé du projet [EN]
@@ -47,6 +48,7 @@ columns:
           - video
           - code
           - mooc
+          - logo
 
   - width: 1/3
     sections:
