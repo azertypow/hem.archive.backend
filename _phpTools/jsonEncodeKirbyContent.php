@@ -39,8 +39,8 @@ function getBlogContentImageType(CMS\Block | Kirby\Cms\File $blockItem): array {
         'caption'       => $blockItem->caption()->value(),
         'alt'           => $blockItem->alt()->value(),
         'link'          => $blockItem->link()->value(),
-        'photoCredit'  => $blockItem->photoCredit()->value(),
-
+        'photoCredit'   => $blockItem->photoCredit()->value(),
+        'small_layout'  => $blockItem->small_layout()->value(),
         'type'          => $blockItem->type(),
         'isHidden'      => $blockItem->isHidden(),
         'image'         => ($blockItem->image()->toFile() instanceof Kirby\Cms\File)

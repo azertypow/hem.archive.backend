@@ -11,6 +11,15 @@ fields:
     multiple: false
     uploads:
       template: blocks/image
+  small_layout:
+    label: Petite taille d'image
+    type: toggle
+    text:
+      - 'non (grande image)'
+      - 'oui (petite image)'
+  link:
+    label: lien
+    type: url
   caption:
     label: Légende
     type: writer

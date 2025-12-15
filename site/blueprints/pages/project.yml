@@ -72,7 +72,7 @@ columns:
           showMonth:
             type: toggle
             label: Afficher le mois
-            default: true
+            default: false
             text:
               - non
               - oui
