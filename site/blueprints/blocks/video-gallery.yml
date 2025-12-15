@@ -16,3 +16,12 @@ fields:
       info:
         type: info
         text: lien video YouTube
+  caption:
+    label: Légende
+    type: writer
+    inline: true
+    marks:
+      - link
+      - bold
+      - italic
+      - underline
