@@ -10,9 +10,14 @@ function getSearch(Kirby\Cms\App $kirby, Kirby\Cms\Site $site): array
   $query   = get('q');
   $minLength = 2;
   $result = page('projects')->children()->listed()->search($query, [
-    'fields' => ['title', 'text', 'text', 'text_EN'],
-    'words' => true,
+    'fields' => ['title', 'text', 'text_EN'],
+    'words' => false,
     'minlength' => 2,
+    'score' => [
+      'title' =>    100,
+      'text' =>     50,
+      'text_EN' =>  50,
+    ],
     'stopwords' => [
       "je", "tu", "il", "elle", "on", "nous", "vous", "ils", "elles",
       "me", "te", "se", "nous", "vous", "le", "la", "les", "lui", "leur",
