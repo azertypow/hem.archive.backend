@@ -15,6 +15,7 @@ function getSearch(Kirby\Cms\App $kirby, Kirby\Cms\Site $site): array
     'minlength' => 2,
     'score' => [
       'title' =>    100,
+      'title_EN' =>    100,
       'text' =>     50,
       'text_EN' =>  50,
     ],
