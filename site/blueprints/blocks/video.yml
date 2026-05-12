@@ -8,6 +8,14 @@ fields:
     label: field.blocks.video.url.label
     type: url
     placeholder: field.blocks.video.url.placeholder
+  toggle_ratio_1_1:
+    width: 1/2
+    label: Ratio 1/1
+    type: toggle
+    default: false
+    text:
+      - "non, vidéo horizontal"
+      - "oui, vidéo carrée"
   caption:
     label: Légende
     type: writer
