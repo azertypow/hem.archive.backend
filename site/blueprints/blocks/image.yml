@@ -20,6 +20,9 @@ fields:
   link:
     label: lien
     type: url
+  alt:
+    label: "text alternatif"
+    type: text
   caption:
     label: Légende
     type: writer

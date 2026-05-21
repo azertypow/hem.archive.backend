@@ -1,0 +1,16 @@
+blueprint: page
+
+name: logo
+icon: image
+preview: image
+fields:
+  image:
+    label: field.blocks.image.name
+    type: files
+    query: model.images
+    multiple: false
+    uploads:
+      template: blocks/image
+  alt:
+    label: "text alternatif"
+    type: text

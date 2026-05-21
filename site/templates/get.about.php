@@ -17,7 +17,7 @@ function getAbout(Kirby\Cms\App $kirby, Kirby\Cms\Site $site): array
       'title'         => $aboutPage->title()->value(),
       'abouttext'     => array_values($aboutPage->abouttext()->toBlocks()->map(function ($value) {
 
-        if ($value->type() == 'image') {
+        if ($value->type() == 'image' || $value->type() == 'logo') {
           return getBlogContentImageType($value);
         }
 

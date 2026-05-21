@@ -24,7 +24,7 @@ columns:
   - width: 1/1
     sections:
       axes:
-        label: Axe de recherche
+        label: Thématiques
         type: pages
         template: list-axes
         empty: la liste est vide pour l'instant…
