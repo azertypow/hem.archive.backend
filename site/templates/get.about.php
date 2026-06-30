@@ -54,10 +54,6 @@ function getAbout(Kirby\Cms\App $kirby, Kirby\Cms\Site $site): array
           return getBlogContentImageType($value);
         }
 
-        if ($value->type() == 'image') {
-          return getBlogContentImageType($value);
-        }
-
         if ($value->type() == 'text')
           return [
             'type' => $value->type(),
