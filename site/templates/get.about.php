@@ -50,6 +50,10 @@ function getAbout(Kirby\Cms\App $kirby, Kirby\Cms\Site $site): array
       })->data()),
       'abouttext_en'     => array_values($aboutPage->abouttext_en()->toBlocks()->map(function ($value) {
 
+        if ($value->type() == 'image' || $value->type() == 'logo') {
+          return getBlogContentImageType($value);
+        }
+
         if ($value->type() == 'image') {
           return getBlogContentImageType($value);
         }
